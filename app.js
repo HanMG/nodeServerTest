@@ -11,4 +11,15 @@ app.listen(3000, function(){
 console.log('end of server code...')
 }*/
 
-console.log('end of server code...')
+// static소스 위치 설정
+app.use(express.static('public'))
+
+// url routing
+app.get('/', function(req,res){
+    // __dirname하면 절대경로를 알아서 표현해준다고함
+    res.sendFile(__dirname + "/public/main.html")
+})
+
+app.get('/main', function(req,res){
+    res.sendFile(__dirname + "/public/main.html")
+})
