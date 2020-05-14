@@ -1,4 +1,26 @@
-npm, node, express 설치
+@npm, node, express 설치
+
+@편의를 위한 nodemon 설치 : npm install nodemon -g
+-g 형식은 시스템 전체에 / --save는 해당 폴더에 설치
 
 
-편의를 위한 nodemon 설치
+@post를 위한 body-parser : npm install body-parser --save
+
+
+@view engine (ejs) 을 활용한 응답처리 : npm install ejs --save
+
+1. app.use('view engine', 'ejs')를 적용하고
+2. views 디렉토리는 위치가 정해져있고 (프로젝트 바로 하위에) 해당 위치에 만들어줘야함
+3. views아래에 ejs 파일을 생성해서 html 처럼 쓰고 데이터 들어가는 부분만
+   <%= 데이터 =>  이런식으로 기입
+4. app.js에서 app.send 형식이 아니라 app.render를 사용
+   res.render('email.ejs',{'email' : req.body.email})
+
+@JSON을 활용한 Ajax 처리
+
+주의점
+JSON.stringify를 통해 data를 string으로 보내야하고,
+sendAjax에서 주소 url을 localhost로 하고 브라우저 주소창에서 127.0.0.1으로 할시
+CORS 관련 제한 에러가 뜨니깐 둘을 맞춰야함
+
+

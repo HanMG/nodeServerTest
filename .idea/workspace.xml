@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="620b906a-346b-4111-9006-e81555879157" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/note.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/036.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/static/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/email.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/body-parser/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/body-parser/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note.txt" beforeDir="false" afterPath="$PROJECT_DIR$/note.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
