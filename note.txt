@@ -24,3 +24,5 @@ sendAjax에서 주소 url을 localhost로 하고 브라우저 주소창에서 12
 CORS 관련 제한 에러가 뜨니깐 둘을 맞춰야함
 
 
+@MySQL 연동 설정 : npm install mysql --save
+

@@ -1,6 +1,13 @@
 var express = require('express')
 var app = express()
 var bodyParser = require('body-parser')
+var mysql = require('mysql')
+
+// 루트에 config라는 하위폴더를 만들고 모듈로 만들어 exports했고
+var dbconfig = require('./config/database.js')
+// 이를 가지고 연결
+var connection = mysql.createConnection(dbconfig)
+connection.connect()
 
 // 동기가 다 되고 나서 비동기가 시작된다.
 app.listen(3000, function(){
@@ -47,8 +54,25 @@ app.post('/email_post',function(req,res){
 
 // ajax
 app.post('/ajax_send_email',function(req,res){
-    console.log(req.body.email)
+    /*console.log(req.body.email)
     // 원래는 뒤에 처리전에 입력받은 값에 대한 체크를 해야함 => select or insert from DB
     var responseData = {'result': 'ok', 'email': req.body.email}
-    res.json(responseData);
+    res.json(responseData);*/
+
+    var email = req.body.email;
+    var responseData = {};
+
+    var query = connection.query('select name from tbl_user where email="'+email+'"', function(err,rows){
+        if(err) throw err;
+        if(rows[0]) {
+            //console.log(rows[0].name)
+            responseData.result = "ok";
+            responseData.name = rows[0].name;
+        }else{
+            responseData.result = "none";
+            responseData.name = "";
+            console.log('none : '+rows[0])
+        }
+        res.json(responseData)
+    })
 });
