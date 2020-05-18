@@ -5,7 +5,7 @@ var path = require('path')
 var mysql = require('mysql')
 
 // 루트에 config라는 하위폴더를 만들고 모듈로 만들어 exports했고
-var dbconfig = require('../config/database.js')
+var dbconfig = require('../../config/database.js')
 // 이를 가지고 연결
 var connection = mysql.createConnection(dbconfig)
 connection.connect()
