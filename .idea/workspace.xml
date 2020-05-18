@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="620b906a-346b-4111-9006-e81555879157" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/router/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/join.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/router/join/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/welcome.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/email.js" beforeDir="false" afterPath="$PROJECT_DIR$/router/email/email.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/router/form/form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/router/main/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

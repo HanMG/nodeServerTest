@@ -5,6 +5,7 @@ var path = require('path')
 var main =  require('./main/main')
 var form = require('./form/form')
 var email = require('./email/email')
+var join = require('./join/index')
 
 // url routing
 router.get('/', function(req,res){
@@ -15,5 +16,6 @@ router.get('/', function(req,res){
 router.use('/main', main)// /main으로 들어오면 main에 대한 라우터 정의를 쓰라고 함
 router.use('/email', email)
 router.use('/form', form)
+router.use('/join', join)
 
 module.exports = router;
