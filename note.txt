@@ -26,3 +26,11 @@ CORS 관련 제한 에러가 뜨니깐 둘을 맞춰야함
 
 @MySQL 연동 설정 : npm install mysql --save
 
+@passport : npm install passport passport-local express-session connect-flash --save-dev
+passport , passport-local : 로그인을 위해
+express-session : 세션 사용을 위해
+connect-flash : 오류 메시지 전달
+
+각기 Document 찾아볼것..
+
+프로미스 패턴?

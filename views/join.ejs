@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Join Page</title>
+    <style>
+        input { margin-top: 10px;}
+        span {color:red;}
+    </style>
+</head>
+<body>
+    <h1>회원가입 페이지</h1>
+    <form action="/join" method="post">
+        email: <input type="text" name="email"><br>
+        <span class='warn'><%= message %></span><br>
+        password: <input type="password" name="password"><br>
+        <input type="submit" value="가입">
+    </form>
+</body>
+</html>

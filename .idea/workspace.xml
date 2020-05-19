@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="620b906a-346b-4111-9006-e81555879157" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/join.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/router/join/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/welcome.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/join.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/main.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note.txt" beforeDir="false" afterPath="$PROJECT_DIR$/note.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/join/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/router/join/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/main/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/router/main/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,19 +42,20 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/router" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/views" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\nodeServerVimeo\router" />
-      <recent name="C:\nodeServerVimeo\public\images" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\nodeServerVimeo\router\email" />
       <recent name="C:\nodeServerVimeo\router\form" />
       <recent name="C:\nodeServerVimeo\router\main" />
       <recent name="C:\nodeServerVimeo\public" />
       <recent name="C:\nodeServerVimeo\static" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\nodeServerVimeo\views" />
+      <recent name="C:\nodeServerVimeo\router" />
+      <recent name="C:\nodeServerVimeo\public\images" />
     </key>
   </component>
   <component name="SvnConfiguration">
