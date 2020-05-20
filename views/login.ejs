@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Page</title>
+    <style>
+            input { margin-top: 10px;}
+            span {color:red;}
+            .result {margin-top : 10px;}
+    </style>
+</head>
+<body>
+<div>
+    <h1>Login Page</h1>
+</div>
+<form action="#" method="post">
+    email : <input type="text" name="email">
+    <br>
+    password : <input type="password" name="password">
+    <br><br>
+</form>
+<button class="ajaxsend">Login</button>
+<div class="result"></div>
+<script>
+    document.querySelector('.ajaxsend').addEventListener('click',function(){
+        var email = document.getElementsByName('email')[0].value;
+        var password = document.getElementsByName('password')[0].value;
+        sendAjax('http://localhost:3000/login', {'email':email,'password':password} );
+    })
+
+    function sendAjax(url, data){
+        data = JSON.stringify(data);
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST',url);
+        xhr.setRequestHeader('Content-Type', "application/json");
+        xhr.send(data);
+
+        xhr.addEventListener('load',function(){
+            var result = JSON.parse(xhr.responseText);
+            var resultDiv = document.querySelector(".result");
+            if(result.email) window.location.href="/main";
+            else resultDiv.innerHTML = result;
+        });
+    }
+</script>
+</body>
+</html>
