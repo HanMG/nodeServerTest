@@ -8,6 +8,7 @@ var email = require('./email/email')
 var join = require('./join/index')
 var login = require('./login/index')
 var logout = require('./logout/index')
+var movie = require('./movie/index')
 
 // url routing
 router.get('/', function(req,res){
@@ -21,4 +22,6 @@ router.use('/form', form)
 router.use('/join', join)
 router.use('/login', login)
 router.use('/logout', logout)
+router.use('/movie', movie)
+
 module.exports = router;
