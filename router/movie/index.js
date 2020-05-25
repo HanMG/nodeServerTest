@@ -33,7 +33,26 @@ router.get('/',function(req,res){
 
 // 2. /movie , POST
 router.post('/',function(req,res){
-    
+    var title = req.body.title;
+    var type = req.body.type;
+    var grade = req.body.grade;
+    var actor = req.body.actor;
+
+    //console.log(title+" "+type+" "+grade+" "+actor);
+    var query = connection.query('select * from movie where title = ?', [title], function(err,rows){
+            if(err) return done(err);
+            if(rows.length){
+                console.log('existed title')
+                return res.json({'result':0})
+            } else{
+                var sql = {title, type, grade, actor}
+                var query = connection.query('insert into movie set ?',sql,function(err,rows){
+                    if(err) throw err
+                    return res.json({'result':1})
+                })
+            }
+       })
+
 })
 
 module.exports = router
