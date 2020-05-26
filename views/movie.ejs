@@ -48,14 +48,13 @@
             </li>
 
             <li class="update_id">
-                <form action="" method="post">
+                <form action="" method="post" class="updateForm">
                    <div> 제목 : <input type="text" name="title" placeholder="Terminator"> </div>
                    <div> 장르 : <input type="text" name="type"  placeholder="drama"> </div>
-                   <div> 평점 : <input type="text" name="grade" placeholder="8.43"> </div>
                    <div> 주연 : <input type="text" name="actor" placeholder="Tom cruise"> </div>
                 </form>
                 <button>영화정보갱신</button>
-                <section class="showResult">ㅁㅁ</section>
+                <section class="showResult"></section>
             </li>
 
             <li class="get_min">
@@ -110,7 +109,11 @@
                     method = "GET";
                     fn = function(result) {
                         if(result.result === 1) {
-                            showResult.innerHTML = result.data[0].actor;
+                            showResult.innerHTML =
+                             '<span>Title: </span>'+result.data[0].title+'<br><br>'+
+                             '<span>Type: </span>'+result.data[0].type+'<br><br>'+
+                             '<span>Grade: </span>'+result.data[0].grade+'<br><br>'+
+                             '<span>Actor: </span>'+result.data[0].actor;
                         }else {
                             showResult.innerHTML = "해당하는 영화가 없네요..";
                         }
@@ -121,9 +124,25 @@
                     method = "DELETE";
                     fn = function(result) {
                         if(result.result === 1) {
-                            showResult.innerHTML = "선택한영화" + result.data+ "가 잘 삭제됐습니다";
+                            showResult.innerHTML = "선택한 영화 " + result.data+ "가 잘 삭제됐습니다";
                         }else{
-                            showResult.innerText = "해당영화가 없습니다";
+                            showResult.innerText = "해당 영화가 없습니다";
+                        }
+                    }
+                    break;
+                case "update_id":
+                    url = "/movie/"+li.getElementsByTagName("input")[0].value;
+                    method = "PUT";
+                    let up_inputs = [].slice.call(document.querySelector(".updateForm").elements);
+                    data = up_inputs.reduce(function(pre,next) {
+                        pre[next.name] = next.value;
+                        return pre;
+                    }, {});
+                    fn = function(result) {
+                        if(result.result === 1) {
+                            showResult.innerHTML = "선택한 영화 " + result.data+ "가 잘 수정되었습니다";
+                        }else{
+                            showResult.innerText = "해당 영화가 없습니다.";
                         }
                     }
                     break;

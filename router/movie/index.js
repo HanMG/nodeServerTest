@@ -55,4 +55,69 @@ router.post('/',function(req,res){
 
 })
 
+// 3. /movie/:title, GET
+router.get('/:title',function(req,res){
+    var title = req.params.title;
+    console.log("title : ", title);
+
+    var responseData = {};
+
+        var query = connection.query('select * from movie where title = ?',[title],function(err,rows){
+            if(err) throw err;
+            if(rows[0]) {
+                console.log(rows);
+                responseData.result = 1;
+                responseData.data = rows;
+            }else{
+                responseData.result = 0;
+            }
+            res.json(responseData);
+        })
+})
+
+// 4. /movie:title , DELETE
+router.delete('/:title',function(req,res){
+    var title = req.params.title;
+    console.log("title : ", title);
+
+    var responseData = {};
+
+        var query = connection.query('delete from movie where title = ?',[title],function(err,rows){
+            if(err) throw err;
+            console.log("rows is ->", rows);
+            if(rows.affectedRows > 0) {
+                console.log(rows);
+                responseData.result = 1;
+                responseData.data = title;
+            }else{
+                responseData.result = 0;
+            }
+            res.json(responseData);
+        })
+})
+
+// 5. /movie:title , PUT
+router.put('/:title',function(req,res){
+    var title = req.body.title;
+    var type = req.body.type;
+    var grade = req.body.grade;
+    var actor = req.body.actor;
+    console.log("title : ", title);
+
+    var responseData = {};
+        var sql = 'UPDATE movie SET type = ?, actor = ? where title = ?';
+        console.log(sql);
+        var query = connection.query(sql,[type, actor, title],function(err,rows){
+            if(err) throw err;
+            console.log("rows is ->", rows);
+            if(rows.affectedRows > 0) {
+                console.log(rows);
+                responseData.result = 1;
+                responseData.data = title;
+            }else{
+                responseData.result = 0;
+            }
+            res.json(responseData);
+        })
+})
 module.exports = router
